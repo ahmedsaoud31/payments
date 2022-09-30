@@ -52,7 +52,7 @@ class HyperPayPayment
 
         $unique_id = uniqid();
         $entityId = $this->getEntityId($source);
-        $data = "entityId=" . $entityId . "&amount=" . $amount . "&currency=" . $this->hyperpay_currency . "&paymentType=DB&merchantTransactionId=" . $unique_id . "&billing.street1=riyadh" . "&billing.city=riyadh" . "&billing.state=riyadh" . "&billing.country=SA" . "&billing.postcode=123456" . "&customer.email=" . $user_email . "&customer.givenName=" . auth()->user()->user_first_name
+        $data = "entityId=" . $entityId . "&amount=" . $amount . "&currency=" . $this->hyperpay_currency . "&paymentType=DB&merchantTransactionId=" . $unique_id . "&billing.street1=riyadh" . "&billing.city=riyadh" . "&billing.state=riyadh" . "&billing.country=SA" . "&billing.postcode=123456" . "&customer.email=" . $user_email . "&customer.givenName=" . $user_first_name
             . "&customer.surname=" . $user_last_name;
 
         $ch = curl_init();
